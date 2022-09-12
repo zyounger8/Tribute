@@ -1,0 +1,43 @@
+* {
+  /* height: auto; */
+  /* background-color: #ff886a; */
+  background-image: linear-gradient(#ff886a, #fcf6cf);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* .parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+/* Page Contents */
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px 200px;
+
+  grid-template-areas:
+    "header header header"
+    "blog blog blog"
+    "blog blog blog"
+    "footer footer footer";
+}
+
+.parent > .header {
+  background-color: white;
+  grid-area: header;
+}
+
+.parent > .blog {
+  grid-area: blog;
+}
+
+.parent > .footer {
+  grid-area: footer;
+}
+
+.child {
+  border: 1px solid blue;
+}
